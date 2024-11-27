@@ -10,7 +10,6 @@ def solution(progresses, speeds):
         for i in range(len(progresses)):
             progresses[i] += speeds[i]
         
-        count = 0
         while progresses and progresses[0] >= 100:
             progresses.popleft()
             speeds.popleft()
@@ -18,5 +17,6 @@ def solution(progresses, speeds):
         
         if count > 0:
             answer.append(count)
+            count = 0
             
     return answer
